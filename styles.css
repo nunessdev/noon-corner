@@ -1,0 +1,212 @@
+/* Existing CSS rules */
+
+@font-face {
+    font-family: '3270 Nerd Font';
+    src: url('fonts/3270NerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: '3270 Nerd Font', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f3d0a1;
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0;
+    color: black;
+    display: flex;
+    font-size: 125%;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header Styles */
+.main-header {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-image: url('images/header_bg.png');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    width: 97%;
+    text-shadow: black;
+}
+
+.logo {
+    font-size: 24px;
+    margin: 0;
+    text-shadow: 1px 1px 2px #201533;
+}
+
+.nav-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+}
+
+.nav-links a:hover {
+    color: #e07a5f;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-title {
+    font-size: 48px;
+    margin: 0;
+    color: white;
+    font-size: 300%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Main Content Styles */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    gap: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Center the cat image and prevent it from disappearing */
+.my-cat {
+    width: 80%; /* Use a percentage to allow it to resize */
+    max-width: 400px;
+    min-width: 200px; /* Prevent it from shrinking too much */
+    height: auto;
+    border-radius: 15px;
+    margin: 20px auto; /* Center the image horizontally */
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+h2 {
+    color: #e07a5f;
+    margin-bottom: 0.2em;
+    text-shadow: 1px 1px 0px rgb(212, 38, 38);
+    text-align: center;
+    font-size: 200%;
+}
+
+footer {
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .text-content {
+        margin: 0;
+        text-align: center;
+    }
+
+    .my-cat {
+        margin: 0 auto 20px auto; /* Center image and add space below it */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 200%;
+    }
+
+    .main-nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        margin: 5px 0;
+    }
+}
+
+/* About Page Specific Styles */
+
+.about-header {
+    position: relative;
+    width: 100%;
+    height: 7vh;
+    background-image: url('images/header_bg.png');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.about-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    width: 97%;
+    text-shadow: black;
+}
+
+.about-logo {
+    font-size: 24px;
+    margin: 0;
+    text-shadow: 1px 1px 2px black;
+}
+
+.about-nav-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+}
+
+.about-nav-links a:hover {
+    color: #e07a5f;
+}
+
+/* Main Content Styles for About Page */
+.about-content {
+    padding: 40px;
+    font-size: 120%;
+}
